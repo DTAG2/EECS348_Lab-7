@@ -8,6 +8,7 @@ int main(int argc, char *argv[]) {
     printf("Enter temperature value: ");
     if (scanf("%f", &temp_in) != 1) { //if unable to obtain correct input
         printf("Invalid input, please enter a number.\n"); //print an error message
+        while (getchar() != '\n'); // consume the remaining invalid input
         while(1){ //continue to loop until correct temperature value is given
             printf("\nEnter temperature value: ");
             if (scanf("%f", &temp_in) != 1) {
@@ -21,6 +22,7 @@ int main(int argc, char *argv[]) {
     printf("\nScales\n1 - Celsius\n2 - Fahrenheit\n3 - Kelvin\n\nSelect the input scale (1, 2, 3): "); //obtain input scale
     if (scanf("%d", &scale) != 1 || scale < 1 || scale > 3) { //if unable to obtain correct input or scale is not in correct range
         printf("Invalid scale\n"); //print an error message if unable to obntain correct input
+        while (getchar() != '\n'); // consume the remaining invalid input
         while(1){ //continue to loop until correct scale value is given
             printf("\nSelect the input scale (1, 2, 3): ");
             if (scanf("%d", &scale) != 1 || scale < 1 || scale > 3) { 
@@ -34,6 +36,7 @@ int main(int argc, char *argv[]) {
     printf("Select the target scale (1, 2, 3): "); //obtain target scale
     if (scanf("%d", &target_scale) != 1 || target_scale < 1 || target_scale > 3) {//if unable to obtain correct input or target scale is not in correct range
         printf("Invalid scale\n"); //print an error message if unable to obntain correct input
+        while (getchar() != '\n'); // consume the remaining invalid input
         while(1){ //continue to loop until correct target scale value is given
             printf("\nSelect the target scale (1, 2, 3): ");
             if (scanf("%d", &target_scale) != 1 || target_scale < 1 || target_scale > 3) { 
