@@ -13,6 +13,7 @@ int main(int argc, char *argv[]) {
             printf("\nEnter temperature value: ");
             if (scanf("%f", &temp_in) != 1) {
                 printf("Invalid input, please enter a number.\n"); //print an error message if unable to obntain correct input
+                while (getchar() != '\n'); // consume the remaining invalid input
             }else{ //break when given correct input
                 break;
             }
@@ -27,6 +28,7 @@ int main(int argc, char *argv[]) {
             printf("\nSelect the input scale (1, 2, 3): ");
             if (scanf("%d", &scale) != 1 || scale < 1 || scale > 3) { 
                 printf("Invalid scale\n"); //print an error message if unable to obntain correct input
+                while (getchar() != '\n'); // consume the remaining invalid input
             }else{ //break when given correct input
                 break;
             }
@@ -41,6 +43,7 @@ int main(int argc, char *argv[]) {
             printf("\nSelect the target scale (1, 2, 3): ");
             if (scanf("%d", &target_scale) != 1 || target_scale < 1 || target_scale > 3) { 
                 printf("Invalid scale\n"); //print an error message if unable to obntain correct input
+                while (getchar() != '\n'); // consume the remaining invalid input
             }else{ //break when given correct input
                 break;
             }
