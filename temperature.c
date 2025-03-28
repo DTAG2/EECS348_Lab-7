@@ -2,7 +2,7 @@
 #include "temperature.h"
 
 float celsius_to_fahrenheit(float celsius){
-    return ((9.0/5.0)*celsius+32);
+    return ((9.0/5.0)*celsius+32); //conversion functions obtained from lab documents
 }
 
 float fahrenheit_to_celsius(float fahrenheit){
@@ -18,15 +18,15 @@ float kelvin_to_celsius(float kelvin){
 }
 
 float fahrenheit_to_kelvin(float fahrenheit){
-    return (celsius_to_kelvin(fahrenheit_to_celsius(fahrenheit)));
+    return (celsius_to_kelvin(fahrenheit_to_celsius(fahrenheit))); //convert from fahrenheit to celsius and then convert to kelvin
 }
 
 float kelvin_to_fahrenheit(float kelvin){
-    return (celsius_to_fahrenheit(kelvin_to_celsius(kelvin)));
+    return (celsius_to_fahrenheit(kelvin_to_celsius(kelvin))); //convert from kelvin to celsius and then convert to fahrenheit
 }
 
-void categorize_temperature(float celsius){
-    if (celsius < 0) {
+void categorize_temperature(float celsius){ //when using this function parameter has to be in celsius
+    if (celsius < 0) { //categories according to lab documents
         printf("Category: Freezing.\nAdvisory: Wear winter clothing.\n");
     } else if (celsius >= 0 && celsius < 10) {
         printf("Category: Cold.\nAdvisory: Wear a jacket.\n");
