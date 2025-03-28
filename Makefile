@@ -1,5 +1,6 @@
 CC := gcc
 
+#for the football program
 football.exe: football_main.o football.o
 	$(CC) -o football.exe football_main.o football.o
 
@@ -12,6 +13,7 @@ football.o: football.c football.h
 clean:
 	rm -f *.o football.exe
 
+#for the temperature program
 temperature.exe: temperature_main.o temperature.o
 	$(CC) -o temperature.exe temperature_main.o temperature.o
 
