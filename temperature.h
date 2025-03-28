@@ -33,6 +33,11 @@ float celsius_to_kelvin(float celsius);
  * @param celsius
  * @return float
  */
-float kelvin_to_celsius(float celsius);
+float kelvin_to_celsius(float kelvin);
+
+float fahrenheit_to_kelvin(float fahrenheit);
+float kelvin_to_fahrenheit(float kelvin);
+void categorize_temperature(float celsius);
+
 
 #endif /* __REPORT_H__ */
